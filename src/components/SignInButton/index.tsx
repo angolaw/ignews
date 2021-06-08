@@ -2,28 +2,21 @@ import { useState } from "react";
 import { FaGithub } from "react-icons/fa";
 import { MdClose } from "react-icons/md";
 import styles from "./styles.module.scss";
+import { signIn, useSession } from "next-auth/client";
 export function SignInButton() {
-  const [isUserLoggedIn, setisUserLoggedIn] = useState(false);
-  function toggleSignIn() {
-    const oldValue = isUserLoggedIn;
-    setisUserLoggedIn(!oldValue);
-  }
+  const [session] = useSession();
 
-  return isUserLoggedIn ? (
-    <button
-      type="button"
-      className={styles.signInButton}
-      onClick={toggleSignIn}
-    >
+  return session ? (
+    <button type="button" className={styles.signInButton}>
       <FaGithub color={"#04d361"} />
-      w0ken0ne
+      {session.user.name}
       <MdClose color="#737380" className={styles.closeIcon} />
     </button>
   ) : (
     <button
       type="button"
       className={styles.signInButton}
-      onClick={toggleSignIn}
+      onClick={() => signIn("github")}
     >
       <FaGithub color={"#eba417"} />
       Sign in with GitHub
