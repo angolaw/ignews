@@ -33,7 +33,9 @@ export default function Home({ product }: HomeProps) {
           <SubscribeButton
             priceId={product.priceId}
             title="Subscribe now"
-            onPress={() => {}}
+            onPress={() => {
+              console.log("subscribe ");
+            }}
           />
         </section>
         <img src="/images/avatar.svg" alt="avatar" />
