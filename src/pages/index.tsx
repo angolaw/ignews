@@ -1,6 +1,6 @@
 import Head from "next/head";
 import { GetServerSideProps, GetStaticProps } from "next";
-import { SubscribeButton } from "../components/CustomButton";
+import { SubscribeButton } from "../components/SubscribeButton";
 //cada arquivo dentro da pasta pages se torna uma rota do site
 import styles from "./home.module.scss";
 import { stripe } from "../services/stripe";
