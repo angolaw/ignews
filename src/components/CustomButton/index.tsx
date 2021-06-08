@@ -1,11 +1,16 @@
 import styles from "./styles.module.scss";
 
-interface CustomButtonProps {
+interface SubscribeButtonProps {
   title: string;
   onPress: () => void;
+  priceId: string;
 }
 
-export function CustomButton({ title, ...rest }: CustomButtonProps) {
+export function SubscribeButton({
+  title,
+  priceId,
+  ...rest
+}: SubscribeButtonProps) {
   return (
     <button {...rest} className={styles.button}>
       {title}
