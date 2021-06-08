@@ -1,0 +1,48 @@
+.container {
+  max-width: 1120px;
+}
+.content {
+  display: flex;
+  flex-direction: row;
+}
+.contentLeft {
+  margin-left: 8rem;
+  margin-top: 10rem;
+  .greeting {
+    h3 {
+      font-size: 1.5rem;
+      font-weight: bold;
+      line-height: 34px;
+    }
+  }
+  .headline {
+    margin-top: 2.5rem;
+    h1 {
+      font-size: 4rem;
+      line-height: 4rem;
+      span {
+        color: var(--cyan-500);
+      }
+    }
+  }
+  .bottomText {
+    margin-top: 1.5rem;
+    h3 {
+      font-size: 1.5rem;
+      font-weight: bold;
+      line-height: 34px;
+      span {
+        color: var(--cyan-500);
+      }
+    }
+  }
+}
+.contentRight {
+  margin-left: 10rem;
+  margin-top: 7rem;
+  margin-right: 10rem;
+  svg {
+    height: 520px;
+    width: 334px;
+  }
+}
