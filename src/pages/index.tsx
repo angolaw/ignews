@@ -1,5 +1,5 @@
 import Head from "next/head";
-import { GetServerSideProps } from "next";
+import { GetServerSideProps, GetStaticProps } from "next";
 import { SubscribeButton } from "../components/CustomButton";
 //cada arquivo dentro da pasta pages se torna uma rota do site
 import styles from "./home.module.scss";
@@ -41,7 +41,7 @@ export default function Home({ product }: HomeProps) {
     </>
   );
 }
-export const getServerSideProps: GetServerSideProps = async () => {
+export const getStaticProps: GetStaticProps = async () => {
   const price = await stripe.prices.retrieve("price_1J060gCrRlYlMKz15ZVQa6pw", {
     expand: ["product"],
   });
