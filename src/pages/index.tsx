@@ -20,9 +20,7 @@ export default function Home() {
             <br />
             <span>for $9.90 month</span>
           </p>
-          <div className={styles.buttonContainer}>
-            <CustomButton title="Subscribe now" onPress={() => {}} />
-          </div>
+          <CustomButton title="Subscribe now" onPress={() => {}} />
         </section>
         <img src="/images/avatar.svg" alt="avatar" />
       </main>
